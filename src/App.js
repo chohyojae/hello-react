@@ -1,21 +1,8 @@
 import Say from './Say.js';
+import EventPractice from './EventPractice.js';
 
 function App() {
-  const name = 'react';
-
-  const style = {
-    backgroundColor: 'gray',
-    color: 'black',
-    fontSize: '32px',
-    fontWeight: 'bold',
-    padding: 16,
-  };
-
-  return (
-    <div style={style} className="App">
-      <Say />
-    </div>
-  );
+  return <EventPractice />;
 }
 
 export default App;
