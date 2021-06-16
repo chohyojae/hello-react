@@ -1,4 +1,5 @@
 import MyComponent from './MyComponent';
+import Counter from './Counter';
 
 function App() {
   const name = 'react';
@@ -22,6 +23,8 @@ function App() {
       <h3>
         <MyComponent name={'뤼액트'} children="AABB" favoriteNumber={1} />
       </h3>
+      <br />
+      <Counter />
     </div>
   );
 }
