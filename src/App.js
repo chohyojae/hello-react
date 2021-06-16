@@ -4,7 +4,7 @@ function App() {
   const name = 'react';
 
   const style = {
-    backgroundColor: 'green',
+    backgroundColor: 'gray',
     color: 'black',
     fontSize: '32px',
     fontWeight: 'bold',
