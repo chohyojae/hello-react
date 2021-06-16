@@ -1,5 +1,4 @@
-import MyComponent from './MyComponent';
-import Counter from './Counter';
+import Say from './Say.js';
 
 function App() {
   const name = 'react';
@@ -14,17 +13,7 @@ function App() {
 
   return (
     <div style={style} className="App">
-      {'리액트' === name ? (
-        <h1>'리액트'입니다.</h1>
-      ) : (
-        <h1>'리액트'가 아닙니다.</h1>
-      )}
-      <h2>(값: {name})</h2>
-      <h3>
-        <MyComponent name={'뤼액트'} children="AABB" favoriteNumber={1} />
-      </h3>
-      <br />
-      <Counter />
+      <Say />
     </div>
   );
 }
