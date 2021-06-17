@@ -2,36 +2,22 @@ import React, { Component } from 'react';
 
 class EventPractice extends Component {
   state = {
-    message: '',
+    username: '',
+    usermessage: '',
   };
 
   handleChange = (e) => {
-    this.setState({ message: e.target.value });
-  };
-
-  handleClick = () => {
-    alert(this.state.message);
-    this.setState({ message: '' }, () => {
-      alert('삭제 완료' + this.state.message);
+    this.setState({
+      [e.target.name]: e.target.value,
     });
   };
 
-  // constructor(props) {
-  //   super(props);
-  //   this.handleChange = this.handleChange.bind(this);
-  //   this.handleClick = this.handleClick.bind(this);
-  // }
-
-  // handleChange(e) {
-  //   this.setState({ message: e.target.value });
-  // }
-
-  // handleClick() {
-  //   alert(this.state.message);
-  //   this.setState({ message: '' }, () => {
-  //     alert('삭제 완료' + this.state.message);
-  //   });
-  // }
+  handleClick = () => {
+    alert(this.state.username + ' : ' + this.state.usermessage);
+    this.setState({ username: '', usermessage: '' }, () => {
+      alert('삭제 완료' + this.state.username + this.state.usermessage);
+    });
+  };
 
   render() {
     return (
@@ -39,26 +25,19 @@ class EventPractice extends Component {
         <h1>&nbsp;이벤트 연습</h1>
         <input
           text="text"
-          message="message"
-          placeholder="아무거나 입력해 보세요"
-          value={this.state.message}
+          name="username"
+          placeholder="이름"
+          value={this.state.username}
           onChange={this.handleChange}
-          // onChange={(e) => {
-          //   this.setState({ message: e.target.value });
-          //   console.log(e.target.value);
-          // }}
         />
-        <button
-          onClick={this.handleClick}
-          // onClick={(e) => {
-          //   alert(this.state.message);
-          //   this.setState({ message: '' }, () => {
-          //     alert('삭제 완료' + this.state.message);
-          //   });
-          // }}
-        >
-          확인
-        </button>
+        <input
+          text="text"
+          name="usermessage"
+          placeholder="메시지"
+          value={this.state.usermessage}
+          onChange={this.handleChange}
+        />
+        <button onClick={this.handleClick}>확인</button>
       </div>
     );
   }
