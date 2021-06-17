@@ -1,8 +1,9 @@
-import Say from './Say.js';
-import EventPractice from './EventPractice.js';
+// import Say from './Say.js';
+// import EventPractice from './EventPractice.js';
+import ValidationSample from './ValidationSample';
 
 function App() {
-  return <EventPractice />;
+  return <ValidationSample />;
 }
 
 export default App;
