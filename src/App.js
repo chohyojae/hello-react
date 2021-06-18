@@ -1,12 +1,22 @@
-// import Say from './Say.js';
-// import EventPractice from './EventPractice.js';
-// import ValidationSample from './ValidationSample';
-import React, { Component } from 'react';
-import IterationSample from './IterationSample';
-class App extends Component {
-  render() {
-    return <IterationSample />;
-  }
-}
+import React, { Component, useState } from 'react';
+import LifeCycleSample from './LifeCycleSample';
 
+const getRandomColor = () => {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+};
+
+const App = () => {
+  const [color, setColor] = useState('#000000');
+
+  const handleClick = () => {
+    setColor(getRandomColor());
+  };
+
+  return (
+    <div>
+      <button onClick={() => handleClick()}>랜덤 색상</button>
+      <LifeCycleSample color={color} />
+    </div>
+  );
+};
 export default App;
